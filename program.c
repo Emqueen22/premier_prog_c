@@ -52,7 +52,18 @@ int main() {
    tas = ias*(1+2*pressure_altitude/1000);
    printf("%lf", tas);
 
-   
+   double ground_speed;
+   ground_speed = tas-headwind;
+   printf("%lf", ground_speed);
+
+   double range;
+   range = fuel*ground_speed*1.852/consumption;
+   printf("%lf", range);
+
+   double takeoff;
+   takeoff = 300*(1+pressure_altitude/1000)*(1-0.01*max(0.temperature-15))*(1-headwind/ground_speed)*(weight/1157)**
+
+
 
 
 
