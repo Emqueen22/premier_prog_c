@@ -3,6 +3,7 @@
 
 
 
+
 int main() {
  double wind_angle, wind_speed, fuel, consumption, wing_surface;
    double pressure, temperature, altitude, ias, weight;
@@ -38,3 +39,23 @@ int main() {
 
    printf("Poids total (weight) [500 - 600000] kg : ");
    scanf("%lf", &weight);
+
+   double headwind;
+   headwind = wind_speed*cos(wind_angle);
+   printf("%lf", headwind);
+
+   double pressure_altitude ;
+   pressure_altitude = altitude+(1023-pressure)*30;
+   printf("%lf", pressure_altitude);
+
+   double tas;
+   tas = ias*(1+2*pressure_altitude/1000);
+   printf("%lf", tas);
+
+   
+
+
+
+
+return 0;
+}
